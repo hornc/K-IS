@@ -3,7 +3,7 @@ NaNoGenMo-2020 submission
 
 K. is Lazy.
 
-A Kafkaesque, esoteric, Nano NaNoGenMo, Meow inspired epizeuxical "lengthy work of fiction" attempt in Lazy-K.
+A Kafkaesque, esoteric, Nano NaNoGenMo, [_Meow_](https://github.com/dariusk/NaNoGenMo-2014/issues/50) inspired [epizeuxical](https://en.wikipedia.org/wiki/Epizeuxis) ["lengthy work of fiction"](https://nanowrimo.uservoice.com/knowledgebase/articles/329132-why-50-000-words-and-how-do-you-define-novel) attempt in [Lazy-K](https://esolangs.org/wiki/Lazy_K).
 
 https://github.com/NaNoGenMo/2020/issues/50
 
