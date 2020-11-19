@@ -5,20 +5,28 @@
 SHELL := /bin/bash
 .PHONY: output sample count size pdf
 
-lang:
 ifndef lang
-$(error Please specify a language target with lang=??)
+lang:
+	$(error Please specify a language target with lang=??)
+
+sample:
+	@echo Sampling all *.lazy files output:
+	@$(foreach file, $(wildcard *.lazy), echo \# $(file):;lazy $(file) | (head -c42; printf " ... " ; tail -c43);echo;)
+
 else
 sourcefile = K-IS_$(lang).lazy
 outfile = K-IS_$(lang).pdf
+
+lang:
+	@:
+
+sample:
+	@lazy $(sourcefile) | (head -c42; printf " ... " ; tail -c43)
+	@echo
 endif
 
 output: lang
 	lazy $(sourcefile)
-
-sample: lang
-	@lazy $(sourcefile) | (head -c42; printf " ... " ; tail -c43)
-	@echo
 
 count: lang
 	lazy $(sourcefile) | wc -w
