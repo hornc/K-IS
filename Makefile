@@ -25,6 +25,9 @@ sample:
 	@echo
 endif
 
+build: lang
+	echo | scheme --quiet --load scheme/K-IS_$(lang).scm | sed 's/^K(S/K(IS/' > $(sourcefile)
+
 output: lang
 	lazy $(sourcefile)
 
