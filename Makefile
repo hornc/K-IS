@@ -16,6 +16,9 @@ sample:
 else
 sourcefile = K-IS_$(lang).lazy
 outfile = K-IS_$(lang).pdf
+  ifeq ($(lang),yi)
+PANDOC_OPTS = -V mainfont:"Cardo" -V lang:he --latex-engine=xelatex
+  endif
 
 lang:
 	@:
@@ -38,4 +41,4 @@ size: lang
 	wc -c $(sourcefile)
 
 pdf: lang
-	pandoc -o $(outfile) <(cat <(echo -e "---\ntitle:") <(grep "^$(lang)" titles.csv | cut -d, -f2) <(echo -e  "\n...\n\\\tiny") <(fold -w100 $(sourcefile)) <(echo -e "\n\n\\\normalsize ") <(lazy $(sourcefile)| sed 's/,\x08//'))
+	pandoc $(PANDOC_OPTS) -o $(outfile) <(cat <(echo -e "---\ntitle:") <(grep "^$(lang)" titles.csv | cut -d, -f2) <(echo -e  "\n...\n\\\tiny") <(fold -w100 $(sourcefile)) <(echo -e "\n\n\\\normalsize") <(lazy $(sourcefile)| sed 's/,\x08//'))
