@@ -19,6 +19,9 @@ outfile = K-IS_$(lang).pdf
   ifeq ($(lang),yi)
 PANDOC_OPTS = -V mainfont:"Cardo" -V lang:he --latex-engine=xelatex
   endif
+  ifeq ($(lang),hit)
+PANDOC_OPTS = -V mainfont:"UllikummiA" --latex-engine=xelatex
+  endif
 
 lang:
 	@:
