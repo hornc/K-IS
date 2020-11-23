@@ -23,7 +23,7 @@ outfile = K-IS_$(lang).pdf
     PANDOC_OPTS = -V mainfont:"UllikummiA" --latex-engine=xelatex
   endif
   ifeq ($(lang),ar)
-	PANDOC_OPTS = -V mainfont:"KacstOffice" -V lang:ar,en -V dir:rtl --latex-engine=xelatex
+    PANDOC_OPTS = -V mainfont:"KacstOffice" -V lang:ar,en -V dir:rtl --latex-engine=xelatex
   endif
 
 lang:
