@@ -1,5 +1,5 @@
 # K-IS
-NaNoGenMo-2020 submission
+[NaNoGenMo-2020](https://github.com/NaNoGenMo/2020) submission
 
 K. is Lazy.
 
@@ -13,3 +13,40 @@ https://github.com/NaNoGenMo/2020/issues/50
 
 Important note on pronunciation: For the purposes of this project, 'K.' refers to Franz Kafka's fictional character Josef K., and is to be pronounced as the German letter: 'kah'.
 
+### Requirements
+
+#### Basic CLI output:
+* Interpreter [Lazy-K](https://github.com/msullivan/LazyK)
+
+#### PDF output:
+* [pandoc](https://pandoc.org/)
+* Hebrew / Yiddish font: https://fonts.google.com/specimen/Cardo
+* Hittite font (UllikumiA): https://www.hethport.uni-wuerzburg.de/cuneifont/
+* Arabic font (KacstOffice): https://fontlibrary.org/en/font/kacstoffice
+
+### Usage and Contents
+
+The main source files for the various novels are named `K-IS_*.lazy`
+There is a Makefile to perform basic tasks for each novel.
+It assumes the is a compiled Lazy-K interpreter named `lazy` avaiable in `$PATH` , you will need to 
+`export PATH=$PATH:~/LazyK` or similar.
+
+`make output lang=en` will produce the English version of the novel.
+`make count lang=en` will count the words in the novel.
+`make sample lang=en` will output a truncated sample of the novel, so you get the idea.
+
+`make sample` provides a sample for every `.lazy` novel in this project.
+
+
+### Translation / Edition Notes
+* **English**: First version in Lazy-K.
+* **German**: Translating into the original language Kafka used to write 'The Trial'. *Faul* is used for lazy. Kafka uses this word in chapter 3 to refer to *die Beamten*
+* **Latin**: A version with a different structure due to grammar.  ... *est*.
+* **Catalan**: Testing whether Lazy-K can produce Unicode output: *"K. és mandrós"* Yes!
+* **Yiddish**: Primarily because I wanted to test RTL layouts in PDF and push Unicode output, but reflects Kafka's Ashkenazi heritage. Yiddish *פויל (foyl)* is close to the German *faul*. Noticed that semetic aphabets' `K` is ~ `Kaf` and that Kafka's name is 'Kaf' + 'Kah' I'd be interested to know if there is any analysis of the letter symbolism in Kafka's choice of character name related to *both* syllables of his surname.
+
+### Submit a Translation
+To suggest a version in another language
+* Equivalant abbreviated *K.* name (K / Kah / Kaf letter)
+* 3rd person singular form of *is lazy* (or 'is {another verb}'.)
+* Grammatical structure in the form of: `{begin-text} {repeated-middle} {end-text}`.
