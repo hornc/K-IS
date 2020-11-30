@@ -38,13 +38,15 @@ It assumes the is a compiled Lazy-K interpreter named `lazy` avaiable in `$PATH`
 `make sample` provides a sample for every `.lazy` novel in this project.
 
 
+`make pdf lang=de` will produce the output, and pass it through `pandoc` to generate a PDF in [output/](output/), including a title pulled from [titles.csv](titles.csv) and the Lazy-K source as a preface.
+
 ### Translation / Edition Notes
 * **English**: First version in Lazy-K.
 * **German**: Translating into the original language Kafka used to write 'The Trial'. *Faul* is used for lazy. Kafka uses this word in chapter 3 to refer to *die Beamten*
 * **Latin**: A version with a different structure due to grammar.  ... *est*.
 * **Catalan**: Testing whether Lazy-K can produce Unicode output: *"K. és mandrós"* Yes!
 * **Yiddish**: Primarily because I wanted to test RTL layouts in PDF and push Unicode output, but reflects Kafka's Ashkenazi heritage. Yiddish *פויל (foyl)* is close to the German *faul*. Noticed that Semitic aphabets' `K` is ~ `Kaf` and that Kafka's name is 'Kaf' + 'Kah' I'd be interested to know if there is any analysis of the letter symbolism in Kafka's choice of character name related to *both* syllables of his surname.
-* **Hittite**: Taking Unicode usage to an obscure extreme. I chose an Akkadiogram [*QA*](https://en.wikipedia.org/wiki/Qa_(cuneiform)) for K. because Akkadian is one of the earliest attested Semitic langauge, and it resembles the letter K, and the Akkadian word *QATU* means hand, which is the origin meaning of the letter in both Arabic and Hebrew, although I can't find a reference that makes that link directly. I could not find a Hittite word for 'lazy', so used one which means 'dirty' in a 'worthy-of-reproach' sense. *Iskunanz* is on the linguistic [Swadesh list](https://en.wiktionary.org/wiki/Appendix:Hittite_Swadesh_list#188) 
+* **Hittite**: Taking Unicode usage to an obscure extreme. I chose an Akkadogram [*QA*](https://en.wikipedia.org/wiki/Qa_(cuneiform)) for K. because Akkadian is the earliest attested Semitic language, it resembles the letter K, and the Akkadian word *QATU* means hand, which is the origin meaning of the letter in both Arabic and Hebrew (although I can't find a reference that makes a link to Akkadian directly). I could not find a Hittite word for 'lazy', so used one which means 'dirty' in a 'worthy-of-reproach' sense. *Iskunanz* is on the linguistic [Swadesh list](https://en.wiktionary.org/wiki/Appendix:Hittite_Swadesh_list#188)
 
 ### Submit a Translation
 To suggest a version in another language
