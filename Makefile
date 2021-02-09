@@ -47,4 +47,4 @@ size: lang
 	wc -c $(sourcefile)
 
 pdf: lang
-	pandoc $(PANDOC_OPTS) -o output/$(outfile) <(cat <(echo -e "---\ntitle:") <(grep "^$(lang)" titles.csv | cut -d, -f2) <(echo -e  "\n...\n\\\tiny \\\begin{verbatim}") <(fold -w100 $(sourcefile)) <(echo -e "\n\n\\\end{verbatim} \\\normalsize") <(lazy $(sourcefile)| sed 's/.\x08//'))
+	pandoc $(PANDOC_OPTS) -o output/$(outfile) <(cat <(echo -e "---\ntitle:") <(grep "^$(lang)" titles.csv | cut -d, -f2 | sed 's/""/\\"/g') <(echo -e  "\n...\n\\\tiny \\\begin{verbatim}") <(fold -w100 $(sourcefile)) <(echo -e "\n\n\\\end{verbatim} \\\normalsize") <(lazy $(sourcefile)| sed 's/.\x08//'))
